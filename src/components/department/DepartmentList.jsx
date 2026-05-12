@@ -29,7 +29,7 @@ const DepartmentList = () => {
       setDepLoading(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/department`,
+          `${import.meta.env.VITE_API_URL}/api/department`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

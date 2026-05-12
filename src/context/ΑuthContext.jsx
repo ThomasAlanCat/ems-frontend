@@ -16,7 +16,7 @@ const AuthContext = ({ children }) => {
       try {
         if (token) {
           const response = await axios.get(
-            `${import.meta.env.VITE_API_URL}/auth/verify`,
+            `${import.meta.env.VITE_API_URL}/api/auth/verify`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,

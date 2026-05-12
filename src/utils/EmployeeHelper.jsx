@@ -4,7 +4,7 @@ export const fetchDepartments = async () => {
   let departments;
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/department`,
+      `${import.meta.env.VITE_API_URL}/api/department`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -29,7 +29,7 @@ export const getEmployees = async (id) => {
   let employees;
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/employee/department/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/employee/department/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

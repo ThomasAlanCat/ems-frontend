@@ -34,7 +34,7 @@ const Edit = () => {
       setEmpLoading(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/employee/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/employee/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -78,7 +78,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `${import.meta.env.VITE_API_URL}/employee/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/employee/${id}`,
         employee,
         {
           headers: {

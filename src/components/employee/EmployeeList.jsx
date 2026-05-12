@@ -20,7 +20,7 @@ const EmployeeList = () => {
       setEmpLoading(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/employee`,
+          `${import.meta.env.VITE_API_URL}/api/employee`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,7 +37,7 @@ const EmployeeList = () => {
             name: emp.userId.name,
             // dob: emp.dob,
             dob: new Date(emp.dob).toDateString(),
-            profileImage: `http://localhost:5001/${emp.userId.profileImage}`,
+            profileImage: `${import.meta.env.VITE_API_URL}/${emp.userId.profileImage}`,
           }));
           setEmployees(data);
           setFilteredEmployees(data);
@@ -85,7 +85,7 @@ const EmployeeList = () => {
 
 
   useEffect(() => {
-    console.log("Το state ενημερώθηκε:", employees);
+    console.log("State has changed:", employees);
   }, [employees]);
 
   return (

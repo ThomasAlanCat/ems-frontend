@@ -20,7 +20,7 @@ const AdminSummary = () => {
     const fetchSummary = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/dashboard/summary`,
+          `${import.meta.env.VITE_API_URL}/api/dashboard/summary`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

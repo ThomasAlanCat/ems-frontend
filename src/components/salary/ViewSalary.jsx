@@ -13,7 +13,7 @@ export const ViewSalary = () => {
     const fetchSalaries = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/salary/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/salary/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

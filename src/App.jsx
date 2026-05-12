@@ -20,6 +20,8 @@ import AddLeave from "./components/leave/AddLeave";
 import Setting from "./components/employeeDashboard/Setting";
 import LeavesTable from "./components/leave/LeavesTable";
 import LeaveDetail from "./components/leave/LeaveDetail";
+import Attendance from "./components/attendance/Attendance";
+import AttendanceReport from "./components/attendance/AttendanceReport";
 
 const App = () => {
   return (
@@ -61,9 +63,16 @@ const App = () => {
         <Route path="/admin-dashboard/salary/add" element={<AddSalary />} />
         <Route path="/admin-dashboard/leaves" element={<LeavesTable />} />
         <Route path="/admin-dashboard/leaves/:id" element={<LeaveDetail />} />
-        <Route path="/admin-dashboard/employees/leaves/:id" element={<LeavesList />} />
-        <Route path="/admin-dashboard/setting" element={<Setting/>} />
-        
+        <Route
+          path="/admin-dashboard/employees/leaves/:id"
+          element={<LeavesList />}
+        />
+        <Route path="/admin-dashboard/setting" element={<Setting />} />
+        <Route path="/admin-dashboard/attendance" element={<Attendance />} />
+        <Route
+          path="/admin-dashboard/attendance-report"
+          element={<AttendanceReport />}
+        />
       </Route>
       <Route
         path="/employee-dashboard"

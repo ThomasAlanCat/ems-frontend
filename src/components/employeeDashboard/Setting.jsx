@@ -27,7 +27,7 @@ const Setting = () => {
     } else {
       try {
         const response = await axios.put(
-          `${import.meta.env.VITE_API_URL}/setting/change-password`,
+          `${import.meta.env.VITE_API_URL}/api/setting/change-password`,
           setting,
           {
             headers: {

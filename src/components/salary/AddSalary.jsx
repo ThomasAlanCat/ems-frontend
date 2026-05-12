@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 const AddSalary = () => {
   const [salary, setSalary] = useState({
-    employeeId: null,
+    employeeId: "",
     basicSalary: 0,
     allowances: 0,
     deductions: 0,
-    payDate: null,
+    payDate: "",
   });
   const [departments, setDepartments] = useState([]);
   const [employees, setEmployees] = useState([]);
@@ -87,7 +87,7 @@ const AddSalary = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/salary/add`,
+        `${import.meta.env.VITE_API_URL}/api/salary/add`,
         salary,
         {
           headers: {

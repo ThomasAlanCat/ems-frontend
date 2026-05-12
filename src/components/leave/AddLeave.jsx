@@ -21,11 +21,11 @@ const AddLeave = () => {
     e.preventDefault();
 
     // ΠΡΟΣΘΕΣΕ ΑΥΤΟ:
-    const targetUrl = `${import.meta.env.VITE_API_URL}/leave/add`;
-    console.log("Στέλνω αίτηση στο:", targetUrl);
+    const targetUrl = `${import.meta.env.VITE_API_URL}/api/leave/add`;
+    console.log("Sending reuest at:", targetUrl);
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/leave/add`,
+        `${import.meta.env.VITE_API_URL}/api/leave/add`,
         leave,
         {
           headers: {

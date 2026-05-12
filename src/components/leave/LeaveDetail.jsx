@@ -13,7 +13,7 @@ const LeaveDetail = () => {
       setLeaveLoading(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/leave/detail/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/leave/detail/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -39,7 +39,7 @@ const LeaveDetail = () => {
   const changeStatus = async (id, status) => {
     try {
       const response = await axios.put(
-        `${import.meta.env.VITE_API_URL}/leave/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/leave/${id}`,
         {status:status},
         {
           headers: {
@@ -76,7 +76,7 @@ const LeaveDetail = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <img
-              src={`http://localhost:5001/${leave?.employeeId?.userId?.profileImage}`}
+              src={`${import.meta.env.VITE_API_URL}/${leave?.employeeId?.userId?.profileImage}`}
               className="rounded-full border w-72"
             />
           </div>

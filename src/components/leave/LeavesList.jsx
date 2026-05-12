@@ -13,7 +13,7 @@ const LeavesList = () => {
     const fetchLeaves = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/leave/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/leave/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
